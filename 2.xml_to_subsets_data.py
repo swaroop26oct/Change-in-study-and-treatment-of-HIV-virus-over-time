@@ -11,8 +11,8 @@ def xml_text(file_name):
 	tree = etree.parse(file)
 	root = tree.getroot().findall('pubmedarticle')
 
-	dt= open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/date_plus_abstract_hiv.csv','a+', encoding='utf-8')
-	f = open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/date_plus_abstract_hiv.txt','a+',encoding='utf-8')
+	dt= open('path/date_plus_abstract_hiv.csv','a+', encoding='utf-8')
+	f = open('path/date_plus_abstract_hiv.txt','a+',encoding='utf-8')
 
 	csvwriter=csv.writer(dt)
 
@@ -37,25 +37,25 @@ def xml_text(file_name):
 			f.write(abstract+'\n')
 			#Write the abstracts from publications in a text file based on the different time periods they were found
 			if(date_year>'1800' and date_year<='1900'):
-				date1900= open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/1800_1900.txt','a+', encoding='utf-8')
+				date1900= open('path/1800_1900.txt','a+', encoding='utf-8')
 				print(date_year)
 				print("abs1 done")
 				date1900.write(abstract+'\n')
 				date1900.close()
 			elif(date_year>='1901' and date_year<='1920'):
-				date1920=open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/1901_1920.txt','a+', encoding='utf-8')
+				date1920=open('path/1901_1920.txt','a+', encoding='utf-8')
 				date1920.write(abstract+'\n')
 				print(date_year)
 				print("abs2 done")
 				date1920.close()
 			elif(date_year>='1921' and date_year<='1940'):
-				date1940=open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/1921_1940.txt','a+', encoding='utf-8')
+				date1940=open('path/1921_1940.txt','a+', encoding='utf-8')
 				date1940.write(abstract+'\n')
 				print(date_year)
 				print("abs3 done")
 				date1940.close()
 			elif(date_year>='1941' and date_year<='1960'):
-				date1960=open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/1941_1960.txt','a+', encoding='utf-8')
+				date1960=open('path/1941_1960.txt','a+', encoding='utf-8')
 				date1960.write(abstract+'\n')
 				print(date_year)
 				print("abs4 done")
@@ -67,25 +67,25 @@ def xml_text(file_name):
 				print("abs5 done")
 				date1980.close()
 			elif(date_year>='1981' and date_year<='2000'):
-				date2000=open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/1981_2000.txt','a+', encoding='utf-8')
+				date2000=open(path/1981_2000.txt','a+', encoding='utf-8')
 				date2000.write(abstract+'\n')
 				print(date_year)
 				print("abs6 done")
 				date2000.close()
 			elif(date_year>='2001' and date_year<='2005'):
-				date2005=open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/2001_2005.txt','a+', encoding='utf-8')
+				date2005=open('path/2001_2005.txt','a+', encoding='utf-8')
 				date2005.write(abstract+'\n')
 				print(date_year)
 				print("abs7 done")
 				date2005.close()
 			elif(date_year>='2006' and date_year<='2010'):
-				date2010=open('C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs/2006_2010.txt','a+', encoding='utf-8')
+				date2010=open('path/2006_2010.txt','a+', encoding='utf-8')
 				date2010.write(abstract+'\n')
 				print(date_year)
 				print("abs8 done")
 				date2010.close()
 			else:
-				date2011=open('C:/Users/Suraj/Desktop/CS584/Scripts/2011/final_Programs_plus.txt','a+', encoding='utf-8') 
+				date2011=open('path/final_Programs_plus.txt','a+', encoding='utf-8') 
 				date2011.write(abstract+'\n')
 				print(date_year)
 				print("abs9 done")
@@ -102,9 +102,9 @@ def xml_text(file_name):
 	f.close()
 	print("job is completed")
 
-
+path = C:/Users/../Scripts/final_Programs
 #Change the working directory to the directory where the PubMed xml files were downloaded
-os.chdir("C:/Users/Suraj/Desktop/CS584/Scripts/final_Programs")
+os.chdir(path)
 for file in glob.glob("*.xml"):
 	print("I am in file:"+file)
 	xml_text(file)
