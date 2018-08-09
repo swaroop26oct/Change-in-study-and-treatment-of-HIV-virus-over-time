@@ -8,8 +8,8 @@
 
 Used ipython notebook to execute the following scripts
 
-4. Sentence tokenization,building Word2Vec and using t-SNE to plot is done using "4.Tokenization_Word2Vec_t-SNE.ipynb"
-	The script "4.Tokenization_Word2Vec_t-SNE.ipynb" should be performed for all the time periods individually.
+4. Sentence tokenization,building Word2Vec and using t-SNE to plot is done using "3.Tokenization_Word2Vec_t-SNE.ipynb"
+	The script "3.Tokenization_Word2Vec_t-SNE.ipynb" should be performed for all the time periods individually.
 	Once the word2vec model is trained we can load the model and then perform the plotting of t-sne to reduce time consuption. 
 
-5. "model_saved" folder will be created after running "4.Tokenization_Word2Vec_t-SNE.ipynb" and contains the trained word2vec model.
+5. "model_saved" folder will be created after running "3.Tokenization_Word2Vec_t-SNE.ipynb" and contains the trained word2vec model.
